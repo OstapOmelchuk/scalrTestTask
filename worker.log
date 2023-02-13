@@ -1,0 +1,14 @@
+DEBUG:peewee.pool:No connection available in pool.
+DEBUG:peewee.pool:Created new connection 139955105580256.
+DEBUG:peewee:('BEGIN', None)
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "task" ("id" INTEGER NOT NULL PRIMARY KEY, "title" VARCHAR(20) NOT NULL, "image" VARCHAR(255) NOT NULL, "command" VARCHAR(255) NOT NULL, "description" VARCHAR(255) NOT NULL, "status" VARCHAR(20) NOT NULL, "execution_time" INTEGER, "logs" TEXT)', [])
+DEBUG:peewee.pool:Returning 139955105580256 to pool.
+DEBUG:__main__:Starting 1 workers.
+Traceback (most recent call last):
+  File "/home/ostap/TestEx/backend-coding-exercise-scalr-main/app/worker.py", line 65, in <module>
+    w.start()
+  File "/home/ostap/TestEx/backend-coding-exercise-scalr-main/app/worker.py", line 53, in start
+    tasks = self._gather_tasks()
+  File "/home/ostap/TestEx/backend-coding-exercise-scalr-main/app/worker.py", line 46, in _gather_tasks
+    raise NotImplementedError
+NotImplementedError
